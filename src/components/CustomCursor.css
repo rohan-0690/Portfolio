@@ -1,0 +1,128 @@
+body {
+  cursor: none;
+}
+
+a, button, .project-card, .experiment-card, .social-link, .nav-links a {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              height 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.2s ease,
+              background 0.2s ease;
+  will-change: transform;
+}
+
+.custom-cursor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent), 0 0 15px var(--accent);
+  transition: all 0.2s ease;
+}
+
+.custom-cursor.pointer {
+  width: 50px;
+  height: 50px;
+  border-color: var(--accent-tertiary);
+  background: rgba(6, 182, 212, 0.05);
+  border-width: 2px;
+}
+
+.custom-cursor.pointer::before {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-tertiary);
+  box-shadow: 0 0 10px var(--accent-tertiary), 0 0 20px var(--accent-tertiary);
+}
+
+.custom-cursor.clicking {
+  width: 8px;
+  height: 8px;
+  border-color: var(--accent-secondary);
+  background: rgba(236, 72, 153, 0.2);
+}
+
+.custom-cursor.clicking::before {
+  background: var(--accent-secondary);
+  box-shadow: 0 0 15px var(--accent-secondary), 0 0 30px var(--accent-secondary);
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 70%);
+  will-change: transform;
+  filter: blur(8px);
+}
+
+.cursor-particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  will-change: transform, opacity;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes clickPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Hide custom cursor on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+  
+  .custom-cursor,
+  .cursor-trail {
+    display: none;
+  }
+  
+  a, button, .project-card, .experiment-card, .social-link, .nav-links a {
+    cursor: pointer !important;
+  }
+}

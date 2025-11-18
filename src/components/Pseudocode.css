@@ -1,0 +1,134 @@
+.pseudocode-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.pseudocode-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  max-width: 900px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
+}
+
+.pseudocode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-primary);
+}
+
+.pseudocode-header h3 {
+  font-size: 1.5rem;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.close-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  border-color: var(--accent);
+  background: rgba(139, 92, 246, 0.1);
+  transform: rotate(90deg);
+}
+
+.pseudocode-block {
+  padding: 2rem;
+  overflow-y: auto;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.pseudocode-block::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pseudocode-block::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+.pseudocode-block::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.pseudocode-block::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .pseudocode-modal {
+    padding: 1rem;
+  }
+  
+  .pseudocode-content {
+    max-height: 90vh;
+  }
+  
+  .pseudocode-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .pseudocode-header h3 {
+    font-size: 1.25rem;
+  }
+  
+  .pseudocode-block {
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+}
