@@ -2,7 +2,7 @@ import './Contact.css';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const socials = [
-  { name: 'GitHub', url: 'https://github.com/username', icon: '⚡' },
+  { name: 'GitHub', url: 'https://github.com/rohan-0690', icon: '⚡' },
   { name: 'Phone', url: 'tel:+919324248183', icon: '📱' },
   { name: 'YouTube', url: 'https://youtube.com/@yourchannel', icon: '🎥' },
   { name: 'Email', url: 'mailto:rohanvedak040@gmail.com', icon: '✉️' }
