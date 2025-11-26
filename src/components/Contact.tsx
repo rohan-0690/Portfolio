@@ -16,14 +16,14 @@ export default function Contact() {
       <h2 className="section-title">Get In Touch</h2>
       <div className="contact-content">
         <p className="contact-text">
-          I'm always open to new opportunities and collaborations. 
+          I'm always open to new opportunities and collaborations.
           Feel free to reach out if you'd like to work together!
         </p>
         <div className="socials">
           {socials.map((social, index) => (
-            <a 
-              key={index} 
-              href={social.url} 
+            <a
+              key={index}
+              href={social.url}
               className="social-link"
               target="_blank"
               rel="noopener noreferrer"

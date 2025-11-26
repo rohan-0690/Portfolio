@@ -5,6 +5,13 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const projects = [
   {
+    title: 'Trading Signal',
+    description: 'An intelligent stock analysis platform that provides real-time trading signals and price targets. Features technical analysis, trend prediction, and risk assessment to help traders make informed decisions.',
+    tags: ['React', 'Financial Analysis', 'Real-time Data', 'Machine Learning'],
+    demo: 'https://example.com',
+    code: 'https://github.com/rohan/trading-signal'
+  },
+  {
     title: 'ARIA',
     description: 'A JARVIS-like AI assistant with voice recognition, natural language processing, and smart automation capabilities. Features real-time responses and seamless integration with various services.',
     tags: ['Python', 'AI/ML', 'NLP', 'Voice Recognition'],
