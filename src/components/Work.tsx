@@ -9,28 +9,28 @@ const projects = [
     description: 'An intelligent stock analysis platform that provides real-time trading signals and price targets. Features technical analysis, trend prediction, and risk assessment to help traders make informed decisions.',
     tags: ['React', 'Financial Analysis', 'Real-time Data', 'Machine Learning'],
     demo: 'https://example.com',
-    code: 'https://github.com/rohan/trading-signal'
+    code: 'https://github.com/rohan-0690/trading-signal'
   },
   {
     title: 'ARIA',
     description: 'A JARVIS-like AI assistant with voice recognition, natural language processing, and smart automation capabilities. Features real-time responses and seamless integration with various services.',
     tags: ['Python', 'AI/ML', 'NLP', 'Voice Recognition'],
     demo: 'https://example.com',
-    code: 'https://github.com/rohan/aria'
+    code: 'https://github.com/rohan-0690/aria'
   },
   {
     title: 'Band Studio',
     description: 'A comprehensive music production platform featuring high-quality voice recording, an interactive drum machine, and a powerful audio editor for mixing and mastering tracks.',
     tags: ['Web Audio API', 'React', 'Audio Processing', 'Music Production'],
     demo: 'https://example.com',
-    code: 'https://github.com/rohan/band-studio'
+    code: 'https://github.com/rohan-0690/band-studio'
   },
   {
     title: 'AttendEase',
     description: 'A smart employee attendance tracking system with GPS-based location verification, allowing employees to check in from anywhere. Features real-time monitoring, analytics dashboard, and automated reporting.',
     tags: ['React Native', 'Geolocation', 'Firebase', 'Node.js'],
     demo: 'https://example.com',
-    code: 'https://github.com/rohan/attendease'
+    code: 'https://github.com/rohan-0690/attendease'
   }
 ];
 

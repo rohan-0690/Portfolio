@@ -13,7 +13,7 @@ export default function About() {
             <code>{`class Developer {
   constructor() {
     this.name = "Rohan";
-    this.location = "Mumbai";
+    this.location = "Mumbai Mira Road";
     this.role = "Full Stack Developer & Designer";
   }
 
@@ -21,7 +21,7 @@ export default function About() {
     return [
       {
         company: "Freelancing",
-        role: "Developer",
+        role: "Designer And Developer",
         period: "2022 - Present",
         description: "Building scalable web applications and games"
       },
